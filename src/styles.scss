@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.wrap-top {
+    width: 100%;
+    padding: 20px;
+    .search-field {
+        width: 80%;
+    }
+    .btn-search {
+        background-color: orange;
+        width: 20%;
+    }
+}
+
+.wrap-result {
+    padding: 20px;
+}

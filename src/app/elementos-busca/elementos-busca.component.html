@@ -1,0 +1,6 @@
+<div class="wrap-top row">
+  <form (ngSubmit)="filterSearch(searchText)">
+  <input class="search-field col-xs-6 col-md-8" type="text" name="search-text" [(ngModel)]="searchText" placeholder="Procurar por nome de usuário">
+  <input type="submit" class="btn-search col-xs-6 col-md-4" value="Pesquisar">
+</form>
+</div>

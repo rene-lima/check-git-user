@@ -1,0 +1,31 @@
+@import '../../assets/helpers/_helpers.scss';
+
+.wrap-top {
+    width: 100%;
+    padding: 20px;
+    .search-field {
+        padding-left: 20px;
+        padding-top: 05px;
+        padding-bottom: 05px;
+        background-color: $input-gray;
+        box-shadow: none;
+        border: none;
+        &:focus {
+            @extend %no-shadow;
+        }
+    }
+    .btn-search {
+        background-color: $itau-orange;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 10px;
+        background-image: url('../../assets/img/search.svg');
+        color: white;
+        font-weight: bold;
+        padding: 05px;
+        border: none;
+        &:focus {
+            @extend %no-shadow;
+        }
+    }
+}

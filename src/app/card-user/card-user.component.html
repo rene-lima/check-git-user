@@ -1,0 +1,38 @@
+<div class="wrap-result">
+  <div class="col-md-4">
+    <div *ngIf="getUser.login" class="card">
+      <div class="wrap-img">
+      <img class="card-img-top" src="{{getUser.avatar_url}}" alt="Foto: {{getUser.login}}">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">{{getUser.name || getUser.login}} </h2>
+        <p>
+          <label>Tipo: </label> {{getUser.type || 'Sem Informações'}} </p>
+        <p>
+          <label>Empresa: </label> {{getUser.company || 'Sem Informações'}} </p>
+        <p>
+          <label>Blog: </label> {{getUser.blog || 'Sem Informações'}} </p>
+        <p>
+          <label>Localização: </label> {{getUser.location || 'Sem Informações'}} </p>
+        <a (click)="showRepos(getUser.login)">{{textRepo}}</a>
+        <div *ngIf="statusShowRepos">
+          <div class="card-repos" *ngFor="let repo of repos">
+            <p>
+              <label>Repositório: </label> {{repo.name}}</p>
+            <p>
+              <label>Owner: </label> {{repo.owner.login}}</p>
+            <p>
+              <label>url: </label> {{repo.url}} </p>
+          </div>
+          <div class="repo-error-msg">
+            <p>{{repoErrorMsg}}</p>
+          </div>
+        </div>
+        <!-- <a (click)="showStars(getUser.login)" class="">Star</a> -->
+      </div>
+    </div>
+    <div *ngIf="getUser.msg" class="user-error-msg">
+      <h4>{{getUser.msg}}</h4>
+    </div>
+  </div>
+</div>
